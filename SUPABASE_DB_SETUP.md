@@ -14,7 +14,7 @@ Run each step in Supabase SQL Editor from top to bottom.
 Purpose:
 
 - Enables required extension.
-- Creates role, status, and locale enums used by the schema.
+- Createss role, status, and locale enums used by the schema.
 
 ```sql
 BEGIN;
