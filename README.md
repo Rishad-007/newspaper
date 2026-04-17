@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Newspaper
 
-## Getting Started
+Next.js 16 foundation for a bilingual newspaper platform.
 
-First, run the development server:
+## Day 1 Setup
+
+### 1) Install dependencies
+
+```bash
+npm install
+```
+
+### 2) Configure environment variables
+
+Create `.env.local` in the project root with the following keys:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+`lib/supabase/env.ts` validates these values at runtime and throws clear errors when they are missing.
+
+### 3) Run the app
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4) Validate baseline
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+## Day 1 Foundation Files
 
-To learn more about Next.js, take a look at the following resources:
+- Constants:
+	- `lib/constants/roles.ts`
+	- `lib/constants/article-status.ts`
+	- `lib/constants/locales.ts`
+	- `lib/constants/pagination.ts`
+- Supabase scaffolding:
+	- `lib/supabase/env.ts`
+	- `lib/supabase/client.ts`
+	- `lib/supabase/server.ts`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Naming Conventions (Locked)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Table names: snake_case plural (example: `article_tags`)
+- Route segments: kebab-case (example: `review-queue`)
+- Storage bucket: `news-images`
+- Slugs: lowercase, hyphen-separated

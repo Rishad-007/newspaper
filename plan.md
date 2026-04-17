@@ -1,5 +1,10 @@
 ## Plan: 6-Week Day-by-Day Newspaper Execution Roadmap
 
+Start here for immediate implementation:
+
+- Day 1 execution guide: [DAY1_KICKOFF.md](DAY1_KICKOFF.md)
+- Agent operating rules: [RULEBOOK.md](RULEBOOK.md)
+
 Build a bilingual (English + Bangla) responsive newspaper web app with Next.js 16 and Supabase free tier, including role-based admin workflow, publishing pipeline, categories/tags, image upload, social sharing, and print support. This roadmap is intentionally granular so implementation can proceed without getting stuck.
 
 **Scope Lock (Before Day 1 starts)**
