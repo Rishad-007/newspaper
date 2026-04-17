@@ -15,7 +15,15 @@ export async function getSupabaseServerClient() {
       setAll(cookiesToSet) {
         try {
           cookiesToSet.forEach(
-            ({ name, value, options }: { name: string; value: string; options: CookieOptions }) => {
+            ({
+              name,
+              value,
+              options,
+            }: {
+              name: string;
+              value: string;
+              options: CookieOptions;
+            }) => {
               cookieStore.set(name, value, options);
             },
           );

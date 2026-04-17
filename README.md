@@ -41,14 +41,14 @@ npm run build
 ## Day 1 Foundation Files
 
 - Constants:
-	- `lib/constants/roles.ts`
-	- `lib/constants/article-status.ts`
-	- `lib/constants/locales.ts`
-	- `lib/constants/pagination.ts`
+  - `lib/constants/roles.ts`
+  - `lib/constants/article-status.ts`
+  - `lib/constants/locales.ts`
+  - `lib/constants/pagination.ts`
 - Supabase scaffolding:
-	- `lib/supabase/env.ts`
-	- `lib/supabase/client.ts`
-	- `lib/supabase/server.ts`
+  - `lib/supabase/env.ts`
+  - `lib/supabase/client.ts`
+  - `lib/supabase/server.ts`
 
 ## Naming Conventions (Locked)
 
